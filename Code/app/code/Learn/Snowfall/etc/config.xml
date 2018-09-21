@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author VIJAYAKUMAR S
+ * @copyright Copyright (c) 2018
+ * @package Learn_Snowfall
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Store/etc/config.xsd">
+    <default>
+        <snowfall_tab>
+            <snowfall_setting>
+				<snowfall_active>1</snowfall_active>
+				<snowfall_text>1*V</snowfall_text>
+				<snowfall_color_1>000000</snowfall_color_1>
+				<snowfall_color_2>f20000</snowfall_color_2>
+				<snowfall_color_3>ffffff</snowfall_color_3>
+				<snowfall_color_4>e2e2e2</snowfall_color_4>
+				<snowfall_color_5>f1f1e2</snowfall_color_5>
+				<snowfall_count>35</snowfall_count>
+				<snowfall_speed>2</snowfall_speed>
+				<snowfall_minsize>10</snowfall_minsize>
+				<snowfall_maxsize>50</snowfall_maxsize>
+            </snowfall_setting>
+        </snowfall_tab>
+    </default>
+</config>

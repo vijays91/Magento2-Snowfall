@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author VIJAYAKUMAR S
+ * @copyright Copyright (c) 2018
+ * @package Learn_Snowfall
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vijaystore" translate="label" sortOrder="180">
+            <label>Vijay</label>
+        </tab>
+        <section id="snowfall_tab" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Snowfall</label>
+            <tab>vijaystore</tab>
+            <resource>Learn_Snowfall::snowfall_configuration</resource>
+            <group id="snowfall_setting" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>Snowfall Setting</label>
+                <field id="snowfall_active" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Snowfall Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="snowfall_text" translate="label comment" type="radios" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Snowfall Symbol</label>
+                    <source_model>Learn\Snowfall\Model\Source\Symbol</source_model>
+                    <validate>required-entry</validate>
+                    <comment></comment>
+                    <depends>
+                        <field id="*/*/snowfall_active">1</field>
+                    </depends>
+                </field>
+                <field id="snowfall_color_1" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Snowfall Color 1</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Learn\Snowfall\Block\Color</frontend_model>
+                    <comment></comment>
+                    <depends>
+                        <field id="*/*/snowfall_active">1</field>
+                    </depends>
+                </field>
+                <field id="snowfall_color_2" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Snowfall Color 2</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Learn\Snowfall\Block\Color</frontend_model>
+                    <comment></comment>
+                    <depends>
+                        <field id="*/*/snowfall_active">1</field>
+                    </depends>
+                </field>
+                <field id="snowfall_color_3" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Snowfall Color 3</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Learn\Snowfall\Block\Color</frontend_model>
+                    <comment></comment>
+                    <depends>
+                        <field id="*/*/snowfall_active">1</field>
+                    </depends>
+                </field>
+                <field id="snowfall_color_4" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Snowfall Color 4</label>
+                    <validate>required-entry</validate>
+                    <frontend_model>Learn\Snowfall\Block\Color</frontend_model>
+                    <comment></comment>
+                    <depends>
+                        <field id="*/*/snowfall_active">1</field>
+                    </depends>
+                </field>
+                <field id="snowfall_color_5" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Snowfall Color 5</label>
+                    <frontend_model>Learn\Snowfall\Block\Color</frontend_model>
+                    <validate>required-entry</validate>
+                    <comment></comment>
+                    <depends>
+                        <field id="*/*/snowfall_active">1</field>
+                    </depends>
+                </field>
+                <field id="snowfall_count" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Snowfall Count</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[More than 30 - 40 not recommended.]]></comment>
+                    <depends>
+                        <field id="*/*/snowfall_active">1</field>
+                    </depends>
+                </field>
+                <field id="snowfall_speed" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Speed of snowfall</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[Recommended values range from 0.3 to 2]]></comment>
+                    <depends>
+                        <field id="*/*/snowfall_active">1</field>
+                    </depends>
+                </field>
+                <field id="snowfall_minsize" translate="label comment" type="text" sortOrder="100" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Minimum flake size</label>
+                    <validate>required-entry validate-number</validate>
+                    <comment><![CDATA[Default: 10]]></comment>
+                    <depends>
+                        <field id="*/*/snowfall_active">1</field>
+                    </depends>
+                </field>
+                <field id="snowfall_maxsize" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Maximum flake size</label>
+                    <validate>required-entry validate-number</validate>
+                    <comment><![CDATA[Default: 50]]></comment>
+                    <depends>
+                        <field id="*/*/snowfall_active">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,21 @@
+<?php
+/**
+ * @author VIJAYAKUMAR S
+ * @copyright Copyright (c) 2018
+ * @package Learn_Snowfall
+ */
+?>
+<script type="text/javascript">
+	require(['prototype'],function($){
+		//<![CDATA[
+			var Snow = new Snowfall(<?php echo $this->getSnowfallJsonOptions(); ?>);
+			Snow.start();
+			var font_name = "<?php echo $this->getSnowfallFont(); ?>";
+			var class_name = (font_name == 2) ? " heartsfall " : " snowfall ";
+			document.observe("dom:loaded", function() {
+				document.getElementById('snowfall').className += class_name;
+				// $('snowfall').addClassName(class_name);
+			});
+		//]]>
+	});
+</script>

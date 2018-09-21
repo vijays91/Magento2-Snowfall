@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author VIJAYAKUMAR S
+ * @copyright Copyright (c) 2018
+ * @package Learn_Snowfall
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="Learn_Snowfall::css/snowfall/snowfall.css" />
+        <link src="Learn_Snowfall::js/snowfall/snowfall.js" />
+	</head>
+    <body>
+		<referenceContainer name="after.body.start">
+			<block class="Learn\Snowfall\Block\Snowfall" name="frontend.snowfall" as="snowfall" template="Learn_Snowfall::snowfall/snowfall.phtml"/>
+        </referenceContainer>
+	</body>
+</page>
